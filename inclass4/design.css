@@ -90,13 +90,13 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
+.link:visited {
+    color: #5a4cc0;
+}
 .link:hover {
     text-decoration: underline;
   }
 .link:focus {
     outline: 2px solid #B6D6CC;
     outline-offset: 2px;
-}
-.link:visited {
-    color: #5a4cc0;
 }
