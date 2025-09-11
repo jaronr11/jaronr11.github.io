@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #B6D6CC;">
+    <h1 class="blue_header" style="text-align:center;"> Design System </h1>
+    <div style="display: flex; gap:128px;"> 
+        <section> 
+            <h1 class="black_header"> Headers</h1>
+            <h1 class="blue_header"> h1: Header</h1>
+            <h2 class="blue_header"> h2: Header</h2>
+            <h3 class="blue_header"> h3: Header</h3>
+            <p class="body"> Body Text</p>
+            <p class="small_text"> Small Text</p>
+        </section>
+        <section>
+            <h1 class="black_header"> Spacing</h1>
+            <h3 class="blue_header mt-8"> 8px </h3>
+            <h3 class="blue_header mt-16"> 16px </h3>
+            <h3 class="blue_header mt-24"> 24px </h3>
+            <h3 class="blue_header mt-32"> 32px </h3>
+            <h3 class="blue_header mt-48"> 48px </h3>
+        </section>
+        <section>
+            <h1 class="black_header"> Btns/Links</h1>
+            <form> 
+                <label class="body" for="user"> Enter Username</label><br>
+                <input type="text" id="user" class="input_field"> <br>
+                <button type="submit" class="btn"> Submit </button> <br>
+                <a href="#" class="link"> Link </a>
+            </form>
+        </section>
+        <section>
+            <h1 class="black_header">Color Palette</h1>
+            
+            <div style="display:flex; gap:32px;">
+              <div style="width:120px; text-align:center;">
+                <div style="background-color:#29339B; height:80px; border-radius:6px;"></div>
+                <p style="margin-top:8px; font-family:Verdana, Geneva, Tahoma, sans-serif;">#29339B<br>Contrast: 8.6:1 </p>
+              </div>
+              <div style="width:120px; text-align:center;">
+                <div style="background-color:#30343F; height:80px; border-radius:6px;"></div>
+                <p style="margin-top:8px; font-family:Verdana, Geneva, Tahoma, sans-serif;">#30343F<br>Contrast: 7.98:1 </p>
+              </div>
+              <div style="width:120px; text-align:center;">
+                <div style="background-color:#B6D6CC; height:80px; border-radius:6px; border:1px solid black;"></div>
+                <p style="margin-top:8px; font-family:Verdana, Geneva, Tahoma, sans-serif;">#B6D6CC<br>Contrast: 1:1 Background Color</p>
+              </div>
+            </div>
+          </section>
+    </div>
+    <article class="body" style="text-align:center">
+        When creating my design system, I wanted to incorporate colors I liked and thought could match well together. I chose the font Roboto because sans-serf fonts are very popular nowadays and I think It is one of the cleanest ones. I did struggle a bit when picking colors as I liked a few that didn’t meet the contrast standard for WCAG, so I had to revise a bit. 
+	When working, I always made sure my color contrast fit the standard for WCAG as well as including focused and hovered states for different elements. 
+	While I was designing, I was surprised by how many colors I thought I was able to easily distinguish and had a high contrast that still failed the WCAG standard. This made me realize just how important it is to follow these standards as it is often challenging for those without disabilities to tell what may or may not be hard  to view. Going forward, I understand how important it is to have organized code in a design system. It allows for easy reusability as well as consistent styling, thus making the overall website design go more smoothly. For example, instead of having to use separate spacing for in-line styles, I learned I could just create a spacing class and use that for any text I wanted to space. For my future projects, I will definitely incorporate aspects of my design system in or at least the same kind of process to ensure the best design possible. I do think that there is a lot of work to be done on my design system as it doesn’t have that “professional” feel many company websites sites have. Which is why, I think the header and text designs including colors are flexible, but I like the font choice as well as my buttons. 
+
+    </article>
+</body>
+</html>
