@@ -1,3 +1,4 @@
+/* page layout*/ 
 .layout
 {
     display:flex;
@@ -7,7 +8,7 @@
     text-align:center;   
 }
 
-
+/*text classes*/ 
 .body
 {
     font-family: 'Roboto', sans-serif;
@@ -30,6 +31,7 @@
     font-size: .75em;
 }
 
+/*button class*/
 .btn
 {
     background-color: #29339B;
@@ -49,6 +51,7 @@
     outline-offset: 2px;
   }
 
+/*input field class*/ 
 .input_field
 {
     background-color: white;
@@ -63,6 +66,7 @@
     background-color: rgb(235, 225, 225);
 }
 
+/*Margin top spacings*/
 .mt-8 {
     margin-top: 8px;
 }
@@ -82,6 +86,7 @@
     margin-top: 64px;
 }
 
+/* Link class*/
 .link 
 {
     display:inline-block;
