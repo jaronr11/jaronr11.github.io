@@ -24,16 +24,19 @@
         const expandBtn = document.querySelector('.expand-btn');
         const details = document.querySelector('.details');
         const content = document.querySelector(".card-content");
+        let toggle = false;
         expandBtn.addEventListener('click', showInfo);
         function showInfo() {
-            if (content.style.display=='none'){
+            if (toggle==false){
                 content.style.display = 'flex';
                 expandBtn.textContent="-";
+                toggle=true;
             }
             else
             {
                 content.style.display = 'none';
                 expandBtn.textContent="+";
+                toggle=false;
             }
         }
       </script>
