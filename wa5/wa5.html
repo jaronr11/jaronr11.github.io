@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">CU Game Dev Club</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#join">Join</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#Projects"> Projects </a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+
+      <script>
+        const hamburger = document.querySelector('.nav-toggle');
+        let toggled = false;
+        hamburger.addEventListener('click', showInfo);
+
+        const nav = document.querySelector(".nav-menu")
+        function showInfo() {
+            nav.classList.toggle("show");
+            if (toggled == false){
+                hamburger.setAttribute("aria-expanded", "true");
+                hamburger.classList.toggle("rotate");
+                toggled=true;
+            }
+            else
+            {
+                hamburger.setAttribute("aria-expanded", "false");
+                hamburger.classList.toggle("rotate");
+                toggled=false;
+            }
+            
+        }
+      </script>
+</body>
+</html>
