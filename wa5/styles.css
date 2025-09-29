@@ -37,8 +37,98 @@ li:hover
     display: none;
 }
 
+.gallery-container { 
+    display: grid; 
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: 
+    "header header" 
+    "nav sidebar" 
+    "main sidebar";
+}
+.gallery-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; grid-area: main}
+.photo-card { height: 200px;}
+.featured { grid-column: span 2; }
+
+.gallery-header {
+    grid-area: header;
+}
+.gallery-nav {
+    grid-area: nav;
+}
+.gallery-sidebar {
+    grid-area: sidebar;
+}
+.slideshow {
+    position:relative;
+    height:400px;
+    width: 600px;
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+.slideshow-photo {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 8px;
+    color: 343434;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+.slideshow-photo img {
+    width: 100%;
+    height: 100%;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.homepage-container { 
+    display: grid; 
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: 
+    "header header" 
+    "slideshow slideshow" 
+    "footer footer";
+}
+.homepage-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; grid-area: slideshow}
+.homepage-header {
+    grid-area: header;
+}
+.homepage-nav {
+    grid-area: nav;
+}
+.homepage-slideshow {
+    grid-area: slideshow;
+}
+.homepage-footer {
+    grid-area: footer;
+}
 @media screen and (max-width:768px)
 {
+    .slideshow {
+        width:100%;
+    }
+
     .nav-menu
     {
         display: none;
@@ -85,6 +175,7 @@ li:hover
     {
         display: flex;
     }
+
 
 
 }

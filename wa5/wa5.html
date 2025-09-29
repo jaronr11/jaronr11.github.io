@@ -7,23 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-brand">CU Game Dev Club</div>
-        <button class="nav-toggle" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#join">Join</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#Projects"> Projects </a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
-      </nav>
+  <div class="homepage-container"> 
+    <header class="homepage-header"> 
+      <nav class="main-nav">
+          <div class="nav-brand">CU Game Dev Club</div>
+          <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="wa5.html">Home</a></li>
+            <li><a href="#join">Join</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="Projects.html"> Projects </a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="homepage-slideshow"> 
+          <div class="slideshow">
+            <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="next" onclick="plusDivs(+1)">&#10095;</button>
 
+            <div class="slideshow-photo fade">
+              <img src="game-design.jpg">
+            </div>
+
+            <div class="slideshow-photo fade">
+              <img src="boulder.avif">
+            </div>
+          </div>
+      </main>
+      <footer class="homepage-footer"> 
+        <p> Email: cu123@gmail.com</p>
+    </footer>
+    </div>
+     
       <script>
+        //hamburger 
         const hamburger = document.querySelector('.nav-toggle');
         let toggled = false;
         hamburger.addEventListener('click', showInfo);
@@ -42,7 +64,29 @@
                 hamburger.classList.toggle("rotate");
                 toggled=false;
             }
-            
+        }
+        //slideshow
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusDivs(n) {
+          showSlides(slideIndex+=n);
+        }
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slideshow-photo");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+
         }
       </script>
 </body>
