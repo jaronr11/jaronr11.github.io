@@ -68,14 +68,12 @@
         //slideshow
         let slideIndex = 1;
         showSlides(slideIndex);
-
+        
+        //for arrows
         function plusDivs(n) {
           showSlides(slideIndex+=n);
         }
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
+        //show slides
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("slideshow-photo");
