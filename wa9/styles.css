@@ -1,0 +1,38 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    position: relative;
+}
+.circle-button {
+    width:225px;
+    height:230px;
+    border-radius:50%;
+    background-color:red;
+    border:none;
+    z-index: 3;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+.circle-button2 {
+    width:225px;
+    height:250px;
+    border-radius:50%;
+    background-color:grey;
+    border:none;
+    z-index: 2;
+    position: relative;
+    top: -225px;
+}
+
+.circle-button:hover 
+{
+    box-shadow:0 0 35px rgb(250, 16, 59);
+}
+
+.circle-button:active {
+    transform: translateY(10px);
+}
