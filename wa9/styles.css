@@ -16,6 +16,7 @@
     position: relative;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
+    transition: background-color 0.2s ease, box-shadow 0.4s ease;
 }
 .circle-button2 {
     width:225px;
@@ -25,7 +26,7 @@
     border:none;
     z-index: 2;
     position: relative;
-    top: -225px;
+    transform: translate(0%, -50%) translateY(-38%);
 }
 
 .circle-button:hover 
@@ -35,4 +36,16 @@
 
 .circle-button:active {
     transform: translateY(10px);
+}
+
+@media screen and (max-width:768px) {
+.circle-button {
+    width: 145px;
+    height: 150px;
+    font-size: 25px;
+}
+.circle-button2 {
+    width: 145px;
+    height: 150px;
+}
 }
