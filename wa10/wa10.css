@@ -7,8 +7,9 @@
 body {
     background-color: rgb(214, 176, 176);
 }
-p {
+.poke-stuff {
     font-family:"Pokemon";
+    font-size: 32px;
     color: rgb(218, 94, 94);
 }
 .app {
@@ -21,8 +22,8 @@ p {
   }
 
 .button {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius:50%;
 }
 .controls {
@@ -31,4 +32,9 @@ p {
 .poke-info {
     display: block;
     text-align: center;
+}
+
+#js-poke-sprite {
+    height: 25%;
+    width: 25%;
 }
