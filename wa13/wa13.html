@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa13.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main"> 
+        <h3> Enter a city or state name or use your precise location to find the weather!</h3>
+        <label for="city-name-input">Enter Location: </label>
+        <input type="text" id="city-name-input">
+        <button id="weather-button" onclick="getInput()"> Use City/State Name</button>
+        <button id="location-button" onclick="getUserLocationWeather()"> Use Exact Location </button>
+        <h4 id="weather-output"> Temperature: </h4>
+        <h4 id="wind-output"> Windspeed: </h4>
+        <h4 id="windDir-output"> Wind Direction: </h4>
+
+    </main>
+    <div>
+        <input type="checkbox" id="windSpeed" value="WindSpeed" onclick="enableWindSpeed()"> 
+        <label for="windSpeed"> Wind Speed </label>
+        <input type="checkbox" id="windDir" value="windDr" onclick="enableWindDir()"> 
+        <label for="windDir"> Wind Direction </label>
+    </div>
+    <script src="wa13.js"></script>
+</body>
+</html>
