@@ -45,7 +45,6 @@ async function getInput() {
 
 
 async function convertGeo(city_name) {
-    try {
         const response = await fetch(
             `https://photon.komoot.io/api/?q=${encodeURIComponent(city_name)}&limit=1`
           );
@@ -54,10 +53,6 @@ async function convertGeo(city_name) {
         const [lon, lat] = first.geometry.coordinates;
         current.long = lon;
         current.lat = lat;
-        
-    } catch (error) {
-        return;
-    }
 }
 
 async function getWeather() {
