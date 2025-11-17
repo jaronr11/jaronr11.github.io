@@ -11,6 +11,12 @@
         <h3> Enter a city or state name or use your precise location to find the weather!</h3>
         <label for="city-name-input">Enter Location: </label>
         <input type="text" id="city-name-input">
+        <div class="checkboxes">
+            <input type="checkbox" id="windSpeed" value="WindSpeed" onclick="enableWindSpeed()"> 
+            <label for="windSpeed"> Wind Speed </label>
+            <input type="checkbox" id="windDir" value="windDr" onclick="enableWindDir()"> 
+            <label for="windDir"> Wind Direction </label>
+        </div>
         <button id="weather-button" onclick="getInput()"> Use City/State Name</button>
         <button id="location-button" onclick="getUserLocationWeather()"> Use Exact Location </button>
         <h4 id="weather-output"> Temperature: </h4>
@@ -18,12 +24,6 @@
         <h4 id="windDir-output"> Wind Direction: </h4>
 
     </main>
-    <div>
-        <input type="checkbox" id="windSpeed" value="WindSpeed" onclick="enableWindSpeed()"> 
-        <label for="windSpeed"> Wind Speed </label>
-        <input type="checkbox" id="windDir" value="windDr" onclick="enableWindDir()"> 
-        <label for="windDir"> Wind Direction </label>
-    </div>
     <script src="wa13.js"></script>
 </body>
 </html>

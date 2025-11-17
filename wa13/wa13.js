@@ -45,14 +45,19 @@ async function getInput() {
 
 
 async function convertGeo(city_name) {
-    const response = await fetch(
-        `https://photon.komoot.io/api/?q=${encodeURIComponent(city_name)}&limit=1`
-      );
-    const json = await response.json();
-    const first = json.features[0];
-    const [lon, lat] = first.geometry.coordinates;
-    current.long = lon;
-    current.lat = lat;
+    try {
+        const response = await fetch(
+            `https://photon.komoot.io/api/?q=${encodeURIComponent(city_name)}&limit=1`
+          );
+        const json = await response.json();
+        const first = json.features[0];
+        const [lon, lat] = first.geometry.coordinates;
+        current.long = lon;
+        current.lat = lat;
+        
+    } catch (error) {
+        return;
+    }
 }
 
 async function getWeather() {
@@ -73,7 +78,7 @@ async function getWeather() {
     }
     catch(err) {
         console.log(err);
-        alert("Failed to get weather");
+        alert("Please enter a valid city name.");
     }
 }
 
