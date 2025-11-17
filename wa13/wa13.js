@@ -56,6 +56,7 @@ async function convertGeo(city_name) {
         current.lat = lat;
         
     } catch (error) {
+        reset();
         return;
     }
 }
@@ -78,10 +79,18 @@ async function getWeather() {
     }
     catch(err) {
         console.log(err);
+        reset();
         alert("Please enter a valid city name.");
     }
 }
 
+function reset() {
+    current.city_name = "";
+    current.lat = "";
+    current.long = "";
+    current.wind = "";
+    current.windDir = "";
+}
 function displayWeather(weather) {
     const disp = document.getElementById("weather-output");
     disp.textContent = "Temperature: " + weather + " °C";
