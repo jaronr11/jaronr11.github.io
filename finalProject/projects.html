@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="main-nav"> 
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-bar"> 
+            <button class="btn" onclick=darkMode() style="margin-right:15px;"> Dark Mode</button>
+            <li><a class="link" href="home.html" style="padding-right: 15px;"> Home</a> </li>
+            <li> <a class="link" href="interests.html" style="padding-right: 15px;"> Interests </a></li>
+            <li><a class="link" href="goals.html" style="padding-right: 15px;"> Goals </a></li>
+            <li> <a class="link" href="contact.html" style="padding-right: 15px;"> Contact </a></li>
+        </ul>
+    </nav>
+
+    <nav class="gallery-nav">
+        <input type="search" id="siteSearch">
+        <button class="btn">Search</button>
+    </nav>
+      <main class="gallery-grid accordion">
+        <div class="photo-card card mt-32 accordion-item" data-category="app Perfect Swing AI coding ML baseball python">
+            <div class="card-content accordion-header"> 
+                <h3> Perfect Swing App </h3>
+                <p> An app that utilizes AI to analyze your baseball swing and improve it.</p>
+            </div>
+
+            <div class="accordion-content"> 
+                <h4>Tech Stack</h4>
+                <p>YOLOv8, Python, Flutter for app design</p>
+            </div>
+        </div>
+        <div class="photo-card card mt-32 accordion-item" data-category="Full Stack web app chat JavaScript HTML CSS">
+            <div class="card-content accordion-header"> 
+                <h3> Full Stack Web Chat App </h3>
+                <p> A web application that streamlines peer-to-peer communication for CU students.</p>
+            </div>
+            <div class="accordion-content"> 
+                <h4>Tech Stack</h4>
+                <p>JavaScript, HTML/CSS, SQL</p>
+            </div>
+        </div>
+        <div class="photo-card card mt-32 accordion-item" data-category="restaurant review database c++ hashmap">
+            <div class="card-content accordion-header">
+                <h3> Restaurant Review Database </h3>
+                <p> A data structure for efficient storing, retrieving, and manipulating of restaurant reviews in C++.</p>
+            </div>
+            <div class="accordion-content"> 
+                <h4>Tech Stack</h4>
+                <p>C++</p>
+            </div>
+        </div>
+        <div class="photo-card card mt-32 accordion-item" data-category="neural network AI chatbot python">
+            <div class="card-content accordion-header"> 
+                <h3> Neural Network Chatbot </h3>
+                <p> A basic retrieval chat bot in Python capable of providing personalized video game recommendations </p>
+            </div>
+            <div class="accordion-content"> 
+                <h4>Tech Stack</h4>
+                <p>Python, NLTK</p>
+            </div>
+        </div>
+      </main>
+      <script>
+        //Search filter
+        document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('siteSearch');
+        const contentToFilter = document.querySelectorAll('.photo-card'); 
+
+        searchInput.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+
+            contentToFilter.forEach(item => {
+            const itemText = item.dataset.category.toLowerCase();
+            if (itemText.includes(searchTerm)) {
+                item.style.display = ''; 
+            } else {
+                item.style.display = 'none'; 
+            }
+            });
+        });
+        });
+
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+      </script>
+      <script src="script.js"></script>
+</body>
+</html>

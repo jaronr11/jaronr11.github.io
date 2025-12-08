@@ -8,12 +8,20 @@
 
     <title>Document</title>
 </head>
-<body style="background-color: #B6D6CC;">
-    <nav style="text-align: center; color: cadetblue;"> 
-        <a href="wa4.html" class="link" style="padding-right: 15px;"> Home</a>
-        <a href="interests.html" class="link" style="padding-right: 15px;"> Interests </a>
-        <a href="goals.html" class="link" style="padding-right: 15px;"> Goals </a>
-        <a href="contact.html" class="link" style="padding-right: 15px;"> Contact </a>
+<body>
+    <nav class="main-nav"> 
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-bar"> 
+            <button class="btn" onclick=darkMode() style="margin-right:15px;"> Dark Mode</button>
+            <li><a class="link" href="home.html" style="padding-right: 15px;"> Home</a> </li>
+            <li> <a class="link" href="projects.html" style="padding-right: 15px;"> Projects </a></li>
+            <li><a class="link" href="goals.html" style="padding-right: 15px;"> Goals </a></li>
+            <li> <a class="link" href="contact.html" style="padding-right: 15px;"> Contact </a></li>
+        </ul>
     </nav>
     
     <h1 style="text-align: center;" class="blue_header"> Jaron Rothbaum - CS Student </h1>
@@ -26,6 +34,8 @@
         <a class="body link" href="resume.pdf" target="_blank"> Resume </a>
     </div>
 
- 
+    <button type="button"> Click this button </button>;
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,29 @@
+.card-accordion {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+.accordion-header {
+    background-color: white;
+    padding: 16px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+    background-color: #ffffff;
+}
+.accordion-content {
+    padding: 8px;
+    display: none;
+    background-color: rgba(245, 245, 245, 0.974);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
