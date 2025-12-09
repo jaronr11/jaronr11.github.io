@@ -188,7 +188,7 @@ body.dark-mode .card {
     color: #f5f5f5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
-
+body.dark-mode .accordion-header,
 body.dark-mode .accordion-content {
     background-color: #1d1c1c;
 }
@@ -203,7 +203,7 @@ body.dark-mode .btn:hover {
 }
 
 body.dark-mode .card-content {
-    color: black;
+    color: white;
 }
 body.dark-mode .modal-content {
     background-color: black;
