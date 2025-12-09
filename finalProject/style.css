@@ -265,6 +265,10 @@ body.dark-mode .black_header {
     {
         transform: rotate(90deg);
     }
+    .nav-toggle.move-down
+    {
+        top: 90px;
+    }
     span
     {
         margin: 3px;
