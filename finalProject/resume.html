@@ -14,7 +14,9 @@
             <span></span>
         </button>
         <ul class="nav-bar"> 
-            <button class="btn" onclick=darkMode() style="margin-right:15px;"> Dark Mode</button>
+            <li> 
+                <button class="btn" onclick=darkMode() style="margin-right:15px;"> Dark Mode</button>
+            </li>
             <li><a class="link" href="home.html" style="padding-right: 15px;"> Home</a> </li>
             <li> <a class="link" href="projects.html" style="padding-right: 15px;"> Projects </a></li>
             <li><a class="link" href="skills.html" style="padding-right: 15px;"> Skills </a></li>
@@ -24,7 +26,7 @@
     </nav>
 <!-- resume embedded code from https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html-->
     <h1 style="text-align: center;" class="header"> Resume </h1>
-    <object data="resume.pdf" type="application/pdf" width="100%" height="500px">
+    <object data="resume.pdf" class="resume" type="application/pdf">
     <p>Unable to display PDF file. <a href="resume.pdf">Download</a> instead.</p>
     </object>
     <script src="script.js"> </script>
