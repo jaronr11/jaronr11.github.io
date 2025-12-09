@@ -181,10 +181,13 @@ body.dark-mode {
 }
 
 body.dark-mode .main-nav,
-body.dark-mode .nav-bar,
 body.dark-mode .gallery-nav {
     background-color: #020617;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .nav-bar {
+    background-color: #3E6080;
 }
 
 
