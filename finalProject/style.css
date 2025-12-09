@@ -286,7 +286,7 @@ body.dark-mode .black_header {
         position: relative;
         margin-bottom:70px;
     }
-
-
-
+    body.dark-mode .nav-toggle:hover {
+        background-color: #3E6080;
+    }
 }
