@@ -171,6 +171,8 @@ body
     display: none;
 }
 
+/* https://www.geeksforgeeks.org/javascript/how-to-make-dark-mode-for-websites-using-html-css-javascript/ */
+
 body.dark-mode {
     background-color: #020617;
     color: #e5e7eb;
@@ -212,6 +214,10 @@ body.dark-mode .btn:hover {
 
 body.dark-mode .card-content {
     color: black;
+}
+body.dark-mode .modal-content {
+    background-color: black;
+    color: white; 
 }
 
 

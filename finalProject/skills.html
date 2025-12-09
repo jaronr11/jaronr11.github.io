@@ -23,33 +23,101 @@
             <li><a class="link" href="games.html" style="padding-right: 15px;"> Games </a></li>
         </ul>
     </nav>
+    <h1 style="text-align: center;"> Skills </h1>
     <main class="skills-grid">
         <div class="skill-icon mt-32">
-            <img class="skill-icon-img" src="images/javascript.png" alt="javascript">
+            <img class="skill-icon-img" src="images/javascript.png" onclick="openModal('modalJS')" alt="javascript">
         </div>
         <div class="skill-icon mt-32">
-            <img class="skill-icon-img" src="images/python.png" alt="python">
+            <img class="skill-icon-img" src="images/python.png" onclick="openModal('modalPython')" alt="python">
         </div>
         <div class="skill-icon mt-32">
-            <img class="skill-icon-img" src="images/java.png" alt="java">
+            <img class="skill-icon-img" src="images/java.png" onclick="openModal('modalJava')" alt="java">
         </div>
         <div class="skill-icon mt-32">
-            <img class="skill-icon-img" src="images/cplus.png" alt="cplusplus" onclick="openSkillInfo()">
+            <img class="skill-icon-img" src="images/cplus.png" onclick="openModal('modalC++')" alt="cplusplus">
         </div>
-        <div id="skill-modal" class="skill-modal">
+        <div id="modalC++" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
+              <p>I use C++ to build fast, real-time logic and systems where performance matters.</p>
+              <p> Projects: </p>
+              <ul>
+                <li>Built small real-time systems to test game mechanics and frame-based logic.</li>
+                <li>Implemented core data structures and memory-safe patterns for performance.</li>
+                <li>Prototyped entity update loops and collision logic in a simple engine setup.</li>
+                <li>Experimented with low-level control over allocation and object lifetime.</li>
+                <li>Created small simulation demos focused on speed and predictable behavior.</li>
+              </ul>
+            </div>
+        </div>
+        <div id="modalJS" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>I use JavaScript to build interactive front-end features and small tools, focusing on clean UI and fast feedback.</p>
+              <p> Projects: </p>
+              <ul>
+                <li>Built small web apps with interactive UI elements and responsive layouts.</li>
+                <li>Worked with APIs to pull data and display it in a clean, simple interface.</li>
+                <li>Created lightweight tools for testing ideas quickly in the browser.</li>
+                <li>Used modern JavaScript features to simplify logic and organize code.</li>
+                <li>Experimented with animations, event handling, and real-time updates.</li>
+              </ul>              
+            </div>
+        </div>
+        <div id="modalPython" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p> I use Python for data work, machine learning projects, and quick prototypes.</p>
+              <p> Projects: </p>
+              <ul>
+                <li>Built data pipelines for collecting, cleaning, and shaping datasets.</li>
+                <li>Implemented machine learning models and ran tests to compare results.</li>
+                <li>Created scripts to automate tasks like data extraction and processing.</li>
+                <li>Worked with popular libraries such as NumPy, pandas, and scikit-learn.</li>
+                <li>Prototyped ideas quickly using notebooks and small Python modules.</li>
+              </ul>                        
+            </div>
+        </div>
+        <div id="modalJava" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p> I use Java to build structured projects with clear architecture, mainly for games and backend logic.</p>
+              <p> Projects: </p>
+              <ul>
+                <li>Built a full maze game using MVC with clean separation of logic and view.</li>
+                <li>Implemented design patterns like Strategy, Factory, Builder, and Facade.</li>
+                <li>Created core systems for movement, collisions, and game updates.</li>
+                <li>Worked with Java Swing to render graphics and handle user input.</li>
+                <li>Focused on project structure, clean code, and reusable components.</li>
+              </ul>                 
             </div>
         </div>
     </main>
+<!-- Modal javaScript and html code from geeks4geeks https://www.w3schools.com/howto/howto_css_modals.asp -->
     <script> 
-        function skillInfo() {
-            let element = document.getElementById("skill-info");
-            if (element.style.display === "none") {
-                element.style.display = "block";
+        function openModal(modalID){
+            // Get the modal
+            var modal = document.getElementById(modalID);
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
             }
-        }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+    }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

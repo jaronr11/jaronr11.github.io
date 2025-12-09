@@ -18,6 +18,7 @@ const hamburger = document.querySelector('.nav-toggle');
             }
             
         }
+//darkmode code from geeks4geeks https://www.geeksforgeeks.org/javascript/how-to-make-dark-mode-for-websites-using-html-css-javascript/
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
