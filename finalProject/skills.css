@@ -20,6 +20,7 @@
 }
 
 .skill-icon {
+    position: relative;
     border-radius:50px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
     width: 150px;
@@ -72,3 +73,15 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
